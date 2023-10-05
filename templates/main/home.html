@@ -1,0 +1,376 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load static %}
+    <!-- slider-area-start -->
+        <div class="slider-area light-bg-s pt-60">
+            <div class="container 0">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="swiper-container slider__active pb-30">
+                            <div class="slider-wrapper swiper-wrapper">
+                                {% for i in sliders %}
+                                <div class="single-slider swiper-slide b-radius-2 slider-height-3 d-flex align-items-center" data-background="/{{ i.Image }}">
+                                    <div class="slider-content slider-content-2">
+                                        <div class="slider-top-btn mb-20" data-animation="fadeInLeft" data-delay="1.5s" style="animation-delay: 1.5s;">
+                                            <a href="{{ i.Link }}" class="st-btn b-radius">{{ i.Discount_Deals }}</a>
+                                        </div>
+                                        <h2 data-animation="fadeInLeft" data-delay="1.7s" class="pt-15 slider-title pb-5">{{ i.Brand_Name }}</h2>
+                                            <p class="pr-20 slider_text fadeInLeft animated" data-animation="fadeInLeft" data-delay="1.7s" style="animation-delay: 1.7s;">Discount {{ i.Discount }}% On Products &amp; Free Shipping</p>                                        <div class="slider-bottom-btn mt-65">
+                                            <a data-animation="fadeInUp" data-delay="1.15s" href="{{ i.Link }}" class="st-btn-border b-radius-2">Discover now</a>
+                                        </div>
+                                    </div>
+                                </div><!-- /single-slider -->
+                                {% endfor %}
+
+                                <div class="main-slider-paginations"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-sm-6">
+                                        <div class="banner__item p-relative w-img mb-30">
+                                            <div class="banner__img banner__img-2 b-radius-2">
+                                                <a href="product-details.html"><img src="{% static 'assets/img/banner/New1.png' %}" alt=""></a>
+                                            </div>
+                                            <div class="banner__content">
+                                                <h6><a href="product-details.html">liveasy <br> wellness calcium magnesium</a></h6>
+                                                <p class="banner-p mt-30">Free Shipping 20km</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-sm-6">
+                                        <div class="banner__item p-relative w-img mb-30">
+                                            <div class="banner__img banner__img-2 b-radius-2">
+                                                <a href="product-details.html"><img src="{% static 'assets/img/banner/New2.png' %}" alt=""></a>
+                                            </div>
+                                            <div class="banner__content">
+                                                <h6><a href="product-details.html">Pears Pure & Gentle Soap Bar</a></h6>
+                                                <p class="banner-p mt-30">Free Shipping 20km</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="banner__item p-relative w-img mb-30">
+                                    <div class="banner__img banner__img-3  b-radius-2">
+                                        <a href="product-details.html"><img src="{% static 'assets/img/banner/New3.png' %}" alt=""></a>
+                                    </div>
+                                    <div class="banner__content banner__content-3">
+                                        <div class="banner-df-btn mb-15">
+                                            <a href="#" class="st-btn b-radius">HOT DEALS</a>
+                                        </div>
+                                        <p>Dettol</p>
+                                        <h6 class="df-title"><a href="product-details.html">Sale Up To 50% Off</a></h6>
+                                        <div class="bottom-btn">
+                                            <a href="shop.html" class="st-btn-border-2 b-radius">Discover now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider-area-end -->
+    <!-- top-dels-start -->
+        <section class="top-dels light-bg-s pt-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section__head d-flex justify-content-between mb-30">
+                            <div class="section__title section__title-2">
+                                <h5 class="st-titile-d st-titile-d-2">Top Deals Of The Day</h5>
+                            </div>
+                            <div class="offer-time">
+                                <span class="offer-title d-none d-sm-block">Hurry Up! Offer ends in:</span>
+                                <div class="countdown">
+                                    <div class="countdown-inner b-radius-2" data-countdown="" data-date="Mar 02 2022 20:20:22">
+                                        <ul class="text-center">
+                                            <li><span data-days="">30</span> Days</li>
+                                            <li><span data-hours="">9</span> Hours</li>
+                                            <li><span data-minutes="">37</span> Mins</li>
+                                            <li><span data-seconds="">38</span> Secs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-xxl-5 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
+                    <div class="col">
+                        <div class="product__item product__item-2 b-radius-2 mb-20">
+                            <div class="product__thumb fix">
+                                <div class="product-image w-img">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/product/tp-1.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="product__offer">
+                                <span class="discount">-15%</span>
+                                </div>
+                                <div class="product-action product-action-2">
+                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                        <i class="fal fa-eye"></i>
+                                        <i class="fal fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-heart"></i>
+                                        <i class="fal fa-heart"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-layer-group"></i>
+                                        <i class="fal fa-layer-group"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__content product__content-3">
+                                <h6><a href="product-details.html">Epple iPad Pro 10.5-inch Cellular 64G</a></h6>
+                                <div class="rating mb-5 mt-10">
+                                    <ul>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                    </ul>
+                                    <span>(01 review)</span>
+                                </div>
+                                <div class="price mb-20">
+                                    <span>$105-$110</span>
+                                </div>
+                                <div class="progress mb-5">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress-rate">
+                                    <span>Sold:315/1225</span>
+                                </div>
+                            </div>
+                            <div class="product__add-cart text-center">
+                                <button type="button" class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
+                                Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product__item product__item-2 b-radius-2 mb-20">
+                            <div class="product__thumb fix">
+                                <div class="product-image w-img">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/product/tp-2.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="product-action product-action-2">
+                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                        <i class="fal fa-eye"></i>
+                                        <i class="fal fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-heart"></i>
+                                        <i class="fal fa-heart"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-layer-group"></i>
+                                        <i class="fal fa-layer-group"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__content product__content-3">
+                                <h6><a href="product-details.html">Men Size Yellow Basketball Jerseys</a></h6>
+                                <div class="rating mb-5 mt-10">
+                                    <ul>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                    </ul>
+                                    <span>(01 review)</span>
+                                </div>
+                                <div class="price mb-20">
+                                    <span>$105-$150</span>
+                                </div><div class="progress mb-5">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress-rate">
+                                    <span>Sold:315/1225</span>
+                                </div>
+                            </div>
+                            <div class="product__add-cart text-center">
+                                <button type="button" class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
+                                Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product__item product__item-2 b-radius-2 mb-20">
+                            <div class="product__thumb fix">
+                                <div class="product-image w-img">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/product/tp-3.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="product__offer">
+                                <span class="discount">-9%</span>
+                                </div>
+                                <div class="product-action product-action-2">
+                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                        <i class="fal fa-eye"></i>
+                                        <i class="fal fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-heart"></i>
+                                        <i class="fal fa-heart"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-layer-group"></i>
+                                        <i class="fal fa-layer-group"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__content product__content-3">
+                                <h6><a href="product-details.html">Xbox Wireless Game Controller Pink</a></h6>
+                                <div class="rating mb-5 mt-10">
+                                    <ul>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                    </ul>
+                                    <span>(01 review)</span>
+                                </div>
+                                <div class="price mb-20">
+                                    <span>$200-$280</span>
+                                </div>
+                                <div class="progress mb-5">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress-rate">
+                                    <span>Sold:315/1225</span>
+                                </div>
+                            </div>
+                            <div class="product__add-cart text-center">
+                                <button type="button" class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
+                                Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product__item product__item-2 b-radius-2 mb-20">
+                            <div class="product__thumb fix">
+                                <div class="product-image w-img">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/product/tp-7.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="product-action product-action-2">
+                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                        <i class="fal fa-eye"></i>
+                                        <i class="fal fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-heart"></i>
+                                        <i class="fal fa-heart"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-layer-group"></i>
+                                        <i class="fal fa-layer-group"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__content product__content-3">
+                                <h6><a href="product-details.html">APPO R11s 64GB Dual 20MP Cameras</a></h6>
+                                <div class="rating mb-5 mt-10">
+                                    <ul>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                    </ul>
+                                    <span>(01 review)</span>
+                                </div>
+                                <div class="price mb-20">
+                                    <span>$150.00-$270.00</span>
+                                </div>
+                                <div class="progress mb-5">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress-rate">
+                                    <span>Sold:315/1225</span>
+                                </div>
+                            </div>
+                            <div class="product__add-cart text-center">
+                                <button type="button" class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
+                                Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product__item product__item-2 b-radius-2 mb-20">
+                            <div class="product__thumb fix">
+                                <div class="product-image w-img">
+                                    <a href="product-details.html">
+                                        <img src="assets/img/product/tp-10.jpg" alt="product">
+                                    </a>
+                                </div>
+                                <div class="product-action product__content-3">
+                                    <a href="#" class="icon-box icon-box-1" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                        <i class="fal fa-eye"></i>
+                                        <i class="fal fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-heart"></i>
+                                        <i class="fal fa-heart"></i>
+                                    </a>
+                                    <a href="#" class="icon-box icon-box-1">
+                                        <i class="fal fa-layer-group"></i>
+                                        <i class="fal fa-layer-group"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product__content product__content-3">
+                                <h6><a href="product-details.html">G951s Pink Stereo Gaming Headset</a></h6>
+                                <div class="rating mb-5 mt-10">
+                                    <ul>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-star"></i></a></li>
+                                    </ul>
+                                    <span>(01 review)</span>
+                                </div>
+                                <div class="price mb-20">
+                                    <span>$120.00-$210.00</span>
+                                </div>
+                                <div class="progress mb-5">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress-rate">
+                                    <span>Sold:315/1225</span>
+                                </div>
+                            </div>
+                            <div class="product__add-cart text-center">
+                                <button type="button" class="cart-btn-3 product-modal-sidebar-open-btn d-flex align-items-center justify-content-center w-100">
+                                Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- top-dels-end -->
+
+{% endblock %}
